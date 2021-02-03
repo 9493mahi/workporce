@@ -1,0 +1,39 @@
+<div class="container">
+  <br>
+  <div class="card" style="border-color: orangered"><br>
+    <form #myfrm="ngForm" class="container">
+      <div class="row">
+        <div class="col-md-4" >
+          <div class="form-group">
+            <img [src]="emp.image" height="390" width="300" />
+            <label><b style="text-align: centernp">Employee Photo</b></label>
+          </div>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>Employee Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                {{emp.empid}}
+              </div>
+    
+          <div class="form-group">
+            <label>First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            {{emp.fname}}
+          </div>
+          <div class="form-group">
+            <label>Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+           {{emp.lname}}
+          </div>
+          <div class="form-group">
+            <label>Email Address&nbsp;&nbsp;&nbsp;:</label>
+            {{emp.email}}
+            
+          </div>
+          <div class="form-group">
+              <button type="button" (click)="btnEditClick(emp.empid)" class="btn btn-primary">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" (click)="btnDel(emp.empid)" class="btn btn-warning">Remove</button>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
